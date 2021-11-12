@@ -1,0 +1,13 @@
+Solution:
+
+Nano 01-Hola-Mundo.sh
+
+------
+#!bin/bash
+    echo Hola Mundo!
+    
+------
+
+Chmod +x 01-Hola.Mundo.sh
+
+./01-Hola.Mundo.sh
