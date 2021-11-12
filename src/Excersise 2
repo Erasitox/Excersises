@@ -1,0 +1,19 @@
+Solution:
+
+Nano 02-Holaparametros.sh
+
+------
+
+#!/bin/bash
+       whereis echo
+               echo Hola Mundo!
+
+------
+
+Chmod +x 02-Holparametros.sh
+
+
+------
+
+echo: /usr/bin/echo /usr/share/man/man1/echo.1.gz
+Hola Mundo!
