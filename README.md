@@ -1,2 +1,2 @@
 # Excersises
-command line excersisess
+command line excersises
