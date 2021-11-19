@@ -1,0 +1,12 @@
+Solution
+
+nano .bashrc
+
+para mi gusto personal añado neofetch al final del bashrc
+
+ahora hago :
+export PATH=$PATH :~/home/Alejandro/Clase/Shellyterminal
+
+Y ya está el ejercicio 8
+
+
