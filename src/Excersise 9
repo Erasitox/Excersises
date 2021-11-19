@@ -1,0 +1,47 @@
+Solution:
+
+nano 09.sh
+
+#!/bin/bash
+
+function ayuda() {
+cat << DESCRPCION_AYUDA
+SYNOPSIS
+$0 NOMBRE_1 [NOMBRE_2] ... [NOMBRE_N]
+DESCRIPCION
+   Muestra "Hola NOMBRE_1, NOMBRE_2, ... NOMBRE_N!" por pantalla.
+CÓDIGOS DE RETORNO
+1 Si el número de parámetros es menor que 1
+2 Si el usuario no está conectado
+DESCRPCION_AYUDA
+}
+
+if [ 0 -le 0 ] ; then
+  echo " introducir parámetro."
+  ayuda
+  exit 1
+fi
+MENSAJE="Hola"
+PRIMERO=1
+
+while [ -n "$1" ]; do
+ESTA_CONECTADO=`./usuarioconectado $1`
+if [ "$ESTA_CONECTADO" == "NO" ]; then
+echo "El usuario $1 no está conectado"
+ayuda
+exit 2
+
+fi
+
+if [ $PRIMERO -eq 1 ]; then
+MENSAJE="$MENSAJE $1"
+PRIMERO=0
+else
+
+MENSAJE="$MENSAJE, $1"
+fi
+
+shift
+done
+
+echo ${MENSAJE}"!"
