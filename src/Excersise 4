@@ -1,0 +1,33 @@
+Solution:
+
+-------
+Nano 04.sh
+
+-------
+
+#!/bin/bash
+
+if [ 0 -le 0 ]; then
+  echo " introducir parámetro."
+  exit 1
+fi
+
+------
+
+MENSAJE="Hola"
+PRIMERO=1
+
+while [ -n "$1" ]; do
+if [ $PRIMERO -eq 1 ]; then
+MENSAJE="$MENSAJE $1"
+PRIMERO=0
+else
+MENSAJE="$MENSAJE, $1"
+fi
+
+shift
+done
+
+echo $MENSAJE
+
+Add "!" (optional)
